@@ -3,38 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>软件库 | ソフトライブラリ</title>
+    <title>软件工具库 | ソフトライブラリ</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #fff; padding: 20px; color: #333; }
-        .nav-header { max-width: 600px; margin: 0 auto 20px; display: flex; justify-content: space-between; }
-        .back-btn { text-decoration: none; color: #007bff; font-weight: bold; }
-        .container { max-width: 600px; margin: 0 auto; }
-        .category-box { background: #f8f9fa; border-radius: 15px; padding: 20px; margin-bottom: 20px; border: 1px solid #eee; }
-        .software-link { display: flex; justify-content: space-between; align-items: center; padding: 10px 0; border-top: 1px solid #ddd; margin-top: 10px; }
-        .dl-link { color: #28a745; text-decoration: none; font-weight: bold; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 20px; line-height: 1.6; }
+        .nav-header { max-width: 900px; margin: 20px auto 40px; display: flex; align-items: center; justify-content: space-between; }
+        .back-btn { text-decoration: none; color: #007bff; font-weight: bold; border: 1.5px solid #007bff; padding: 8px 20px; border-radius: 25px; transition: 0.3s; background: white; }
+        .back-btn:hover { background: #007bff; color: white; }
+        .container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; }
+        .category-card { background: white; border-radius: 20px; padding: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .category-title { border-bottom: 2px solid #007bff; padding-bottom: 10px; margin-bottom: 15px; }
+        .category-title h3 { margin: 0; color: #333; font-size: 18px; }
+        .software-item { display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+        .software-item:last-child { border-bottom: none; }
+        .info b { display: block; font-size: 15px; }
+        .info span { font-size: 12px; color: #888; display: block; line-height: 1.4; }
+        .dl-link { background: #28a745; color: white; text-decoration: none; padding: 6px 14px; border-radius: 6px; font-size: 13px; font-weight: bold; flex-shrink: 0; margin-left: 10px; }
+        .dl-link:hover { background: #218838; }
+        @media (max-width: 500px) { .container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
+
     <div class="nav-header">
         <a href="index.html" class="back-btn">⬅ 返回首页 / 戻る</a>
+        <div style="text-align: right;">
+            <div style="font-weight: bold; color: #555;">为您精选装机必备工具</div>
+            <div style="font-size: 12px; color: #999;">厳選されたPCツールをお届けします</div>
+        </div>
     </div>
 
     <div class="container">
-        <div class="category-box">
-            <h3 style="margin:0">1. 压缩工具 / 圧縮ツール</h3>
-            <div class="software-link">
-                <span>7-Zip v26.00</span>
-                <a href="https://www.7-zip.org/" target="_blank" class="dl-link">前往官网下载</a>
+        <div class="category-card">
+            <div class="category-title"><h3>1. 系统镜像 / OSイメージ</h3></div>
+            <div class="software-item">
+                <div class="info"><b>Windows 11 (22H2/23H2)</b><span>官方镜像下载 / 公式イメージ</span></div>
+                <a href="https://www.microsoft.com/software-download/windows11" target="_blank" class="dl-link">官网 / 公式</a>
             </div>
         </div>
 
-        <div class="category-box">
-            <h3 style="margin:0">2. C盘瘦身 / Cドライブ清掃</h3>
-            <div class="software-link">
-                <span>WizTree</span>
-                <a href="https://www.wiztreefree.com/" target="_blank" class="dl-link">前往官网下载</a>
+        <div class="category-card">
+            <div class="category-title"><h3>2. 压缩解压 / 圧縮・解凍</h3></div>
+            <div class="software-item">
+                <div class="info"><b>7-Zip & NanaZip</b><span>开源、高效率 / オープンソース</span></div>
+                <a href="https://www.7-zip.org/" target="_blank" class="dl-link">下载 / 取得</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <div class="category-title"><h3>3. 下载加速 / ダウンロード</h3></div>
+            <div class="software-item">
+                <div class="info"><b>NDM & Motrix</b><span>多线程高速下载 / 高速取得</span></div>
+                <a href="https://www.neatdownloadmanager.com/" target="_blank" class="dl-link">下载 / 取得</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <div class="category-title"><h3>4. 影音播放 / メディア再生</h3></div>
+            <div class="software-item">
+                <div class="info"><b>PotPlayer & VLC</b><span>全能格式支持 / 全形式対応</span></div>
+                <a href="https://www.videolan.org/" target="_blank" class="dl-link">下载 / 取得</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <div class="category-title"><h3>5. 磁盘管理 / ディスク管理</h3></div>
+            <div class="software-item">
+                <div class="info"><b>分区助手 & Rufus</b><span>分区、写盘工具 / パーティション</span></div>
+                <a href="https://rufus.ie/" target="_blank" class="dl-link">下载 / 取得</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <div class="category-title"><h3>6. 系统维护 / メンテナンス</h3></div>
+            <div class="software-item">
+                <div class="info"><b>Dism++ & Recuva</b><span>系统优化与数据恢复 / データ復旧</span></div>
+                <a href="https://www.ccleaner.com/recuva" target="_blank" class="dl-link">下载 / 取得</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <div class="category-title"><h3>7. 软件卸载 / アンインストール</h3></div>
+            <div class="software-item">
+                <div class="info"><b>Geek Uninstaller & BCU</b><span>强力清扫残留 / 残留ファイル清掃</span></div>
+                <a href="https://geekuninstaller.com/" target="_blank" class="dl-link">下载 / 取得</a>
+            </div>
+        </div>
+
+        <div class="category-card">
+            <div class="category-title"><h3>8. 数据传输 / データ転送</h3></div>
+            <div class="software-item">
+                <div class="info"><b>Landrop</b><span>局域网跨平台互传 / ローカル転送</span></div>
+                <a href="https://landrop.app/" target="_blank" class="dl-link">下载 / 取得</a>
             </div>
         </div>
     </div>
+
 </body>
 </html>
