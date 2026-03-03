@@ -5,55 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gifu Service | 岐阜服务站</title>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
-        .lang-switch { margin-bottom: 20px; }
-        button { padding: 10px 20px; margin: 5px; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; }
-        .active { background: #007bff; color: white; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 900px; width: 90%; }
-        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.3s; }
-        .card:hover { transform: translateY(-10px); }
-        .card span { font-size: 50px; display: block; margin-bottom: 15px; }
-        .lang-content { display: none; }
-        .visible { display: block; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; padding: 20px; }
+        h1 { color: #333; margin-bottom: 5px; font-size: 24px; }
+        h2 { color: #666; margin-bottom: 40px; font-size: 20px; font-weight: normal; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1000px; width: 100%; }
+        .card { background: white; padding: 35px 20px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); }
+        .card span { font-size: 50px; display: block; margin-bottom: 20px; }
+        .content-box { border-top: 1px dashed #eee; padding-top: 15px; margin-top: 15px; }
+        h3 { margin: 10px 0 5px; font-size: 18px; color: #333; }
+        p { margin: 0; color: #777; font-size: 14px; }
+        .jp-text { color: #888; font-style: normal; }
     </style>
 </head>
 <body>
-    <div class="lang-switch">
-        <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
-        <button id="btn-jp" onclick="switchLang('jp')">日本語</button>
-    </div>
 
-    <h1 class="zh visible">你好！我在岐阜为您提供服务</h1>
-    <h1 class="jp">こんにちは！岐阜でサービスを提供しています</h1>
+    <h1>你好！我在岐阜为您提供服务</h1>
+    <h2>こんにちは！岐阜でサービスを提供しています</h2>
 
     <div class="grid">
-        <div class="card"><span>🧼</span><div class="zh visible"><h3>空调清洁</h3><p>专业深度清洗</p></div><div class="jp"><h3>エアコン洗浄</h3><p>プロの徹底洗浄</p></div></div>
-        
+        <div class="card">
+            <span>🧼</span>
+            <div>
+                <h3>空调清洁</h3>
+                <p>专业深度清洗，为您创造清新空气</p>
+            </div>
+            <div class="content-box">
+                <h3 class="jp-text">エアコン洗浄</h3>
+                <p class="jp-text">プロの徹底洗浄、快適な空間をお届けします</p>
+            </div>
+        </div>
+
         <a class="card" href="mailto:sq25819487@gmail.com">
             <span>💻</span>
-            <div class="zh visible"><h3>电脑故障咨询</h3><p>远程诊断及上门维修</p></div>
-            <div class="jp"><h3>パソコン相談</h3><p>遠隔診断・訪問修理</p></div>
+            <div>
+                <h3>电脑故障咨询</h3>
+                <p>远程诊断及上门维修，为您排忧解难</p>
+            </div>
+            <div class="content-box">
+                <h3 class="jp-text">パソコン相談</h3>
+                <p class="jp-text">遠隔診断・訪問修理、お気軽にご相談ください</p>
+            </div>
         </a>
 
         <a class="card" href="software.html">
             <span>📥</span>
-            <div class="lang-content zh visible">
+            <div>
                 <h3>软件工具库</h3>
-                <p>分类导航，翻页查看</p>
-             </div>
-             <div class="lang-content jp">
-                 <h3>ソフトライブラリ</h3>
-                 <p>カテゴリ別、詳細へ</p>
-              </div>
-            </a>
+                <p>分类导航，为您精选实用工具</p>
+            </div>
+            <div class="content-box">
+                <h3 class="jp-text">ソフトライブラリ</h3>
+                <p class="jp-text">カテゴリ別、公式サイトから安全に取得</p>
+            </div>
+        </a>
+    </div>
 
-    <script>
-        function switchLang(lang) {
-            document.querySelectorAll('.zh, .jp').forEach(el => el.classList.remove('visible'));
-            document.querySelectorAll('.' + lang).forEach(el => el.classList.add('visible'));
-            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
-            document.getElementById('btn-jp').classList.toggle('active', lang === 'jp');
-        }
-    </script>
 </body>
 </html>
