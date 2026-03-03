@@ -4,142 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gifu Service | 岐阜服务站</title>
-    
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-XXXXXXXXXX');
-    </script>
-
     <style>
-        body { font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", sans-serif; margin: 0; text-align: center; background: #f4f7f6; color: #333; }
-        .container { max-width: 800px; margin: auto; padding: 50px 20px; }
-        h1 { margin-bottom: 20px; }
-        
-        /* 语言切换按钮样式 */
-        .lang-switch { margin-bottom: 30px; }
-        button { padding: 10px 25px; cursor: pointer; border: 1px solid #ddd; background: white; border-radius: 20px; transition: 0.3s; font-weight: bold; }
-        button:hover { background: #007AFF; color: white; border-color: #007AFF; }
-        button.active { background: #007AFF; color: white; border-color: #007AFF; }
-
-        /* 卡片网格布局 */
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-top: 40px; }
-        .card { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); transition: 0.3s; cursor: pointer; text-decoration: none; color: inherit; display: block; border: 1px solid transparent; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border: 1px solid #007AFF; }
+        body { font-family: 'Segoe UI', sans-serif; background: #f4f7f6; margin: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; text-align: center; }
+        .lang-switch { margin-bottom: 20px; }
+        button { padding: 10px 20px; margin: 5px; border: none; border-radius: 20px; cursor: pointer; font-weight: bold; }
+        .active { background: #007bff; color: white; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; max-width: 900px; width: 90%; }
+        .card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.3s; }
+        .card:hover { transform: translateY(-10px); }
         .card span { font-size: 50px; display: block; margin-bottom: 15px; }
-        
-        /* 初始隐藏逻辑优化 */
         .lang-content { display: none; }
-        .visible { display: block !important; }
+        .visible { display: block; }
     </style>
 </head>
 <body>
-
-<div class="container">
     <div class="lang-switch">
-        <button id="btn-zh" onclick="showLang('zh')" class="active">中文</button>
-        <button id="btn-jp" onclick="showLang('jp')">日本語</button>
+        <button id="btn-zh" class="active" onclick="switchLang('zh')">中文</button>
+        <button id="btn-jp" onclick="switchLang('jp')">日本語</button>
     </div>
 
-    <header>
-        <h1 class="lang-content zh visible">你好！我在岐阜为您提供服务</h1>
-        <h1 class="lang-content jp">こんにちは！岐阜でサポートいたします</h1>
-    </header>
+    <h1 class="zh visible">你好！我在岐阜为您提供服务</h1>
+    <h1 class="jp">こんにちは！岐阜でサービスを提供しています</h1>
 
     <div class="grid">
-        <a class="card" href="#">
-            <span>🧼</span>
-            <div class="lang-content zh visible">
-                <h3>空调清洁</h3>
-                <p>专业深度清洗，岐阜全域对应</p>
-            </div>
-            <div class="lang-content jp">
-                <h3>エアコンクリーニング</h3>
-                <p>プロの洗浄、岐阜県内対応</p>
-            </div>
-        </a>
-
-        <a class="card" href="#">
-            <span>💻</span>
-            <div class="lang-content zh visible">
-                <h3>电脑故障咨询</h3>
-                <p>远程诊断及上门维修</p>
-            </div>
-            <div class="lang-content jp">
-                <h3>パソコン修理・相談</h3>
-                <p>遠隔診断・訪問修理</p>
-            </div>
-        </a>
-<div class="grid">
-        <a class="card" href="#software-menu">
-            <span>📥</span>
-            <div class="lang-content zh visible">
-                <h3>软件工具库</h3>
-                <p>分类齐全，官网直达</p>
-            </div>
-            <div class="lang-content jp">
-                <h3>ソフトライブラリ</h3>
-                <p>カテゴリ別、公式サイト直結</p>
-            </div>
-        </a>
-        </div>
-
-    <div id="software-menu" style="margin-top: 50px; padding: 20px; background: #f9f9f9; border-radius: 15px;">
-        <h2 class="zh visible">请选择软件分类</h2>
-        <h2 class="jp">カテゴリを選択してください</h2>
+        <div class="card"><span>🧼</span><div class="zh visible"><h3>空调清洁</h3><p>专业深度清洗</p></div><div class="jp"><h3>エアコン洗浄</h3><p>プロの徹底洗浄</p></div></div>
         
-        <div class="software-list" style="display: flex; flex-direction: column; gap: 15px;">
-            <div class="software-item">
-                <strong class="zh visible">1. 压缩工具：</strong>
-                <strong class="jp">1. 圧縮ツール：</strong>
-                <a href="https://www.7-zip.org/" target="_blank" style="color: #007bff;">7-Zip (官网)</a>
-            </div>
+        <a class="card" href="mailto:sq25819487@gmail.com">
+            <span>💻</span>
+            <div class="zh visible"><h3>电脑故障咨询</h3><p>远程诊断及上门维修</p></div>
+            <div class="jp"><h3>パソコン相談</h3><p>遠隔診断・訪問修理</p></div>
+        </a>
 
-            <div class="software-item">
-                <strong class="zh visible">2. C盘瘦身：</strong>
-                <strong class="jp">2. Cドライブ清掃：</strong>
-                <a href="https://www.wiztreefree.com/" target="_blank" style="color: #007bff;">WizTree (推荐)</a>
-            </div>
-
-            <div class="software-item">
-                <strong class="zh visible">3. 下载软体：</strong>
-                <strong class="jp">3. ダウンロード：</strong>
-                <a href="https://motrix.app/zh-CN/" target="_blank" style="color: #007bff;">Motrix (开源)</a>
-            </div>
-
-            <div class="software-item">
-                <strong class="zh visible">4. 播放媒体：</strong>
-                <strong class="jp">4. メディア再生：</strong>
-                <a href="https://www.videolan.org/" target="_blank" style="color: #007bff;">VLC Player (全能)</a>
-            </div>
-        </div>
+        <a class="card" href="software.html">
+            <span>📥</span>
+            <div class="zh visible"><h3>软件工具库</h3><p>分类导航，官网直达</p></div>
+            <div class="jp"><h3>ソフトライブラリ</h3><p>カテゴリ別、公式サイト直結</p></div>
+        </a>
     </div>
-      
 
-<script>
-    function showLang(lang) {
-        // 1. 切换所有内容的显示
-        document.querySelectorAll('.lang-content').forEach(el => {
-            el.classList.remove('visible');
-        });
-        document.querySelectorAll('.' + lang).forEach(el => {
-            el.classList.add('visible');
-        });
-
-        // 2. 切换按钮的激活状态样式
-        document.querySelectorAll('.lang-switch button').forEach(btn => {
-            btn.classList.remove('active');
-        });
-        document.getElementById('btn-' + lang).classList.add('active');
-
-        // 3. (可选) 向追踪系统发送切换语言事件
-        if (typeof gtag === 'function') {
-            gtag('event', 'change_language', { 'language': lang });
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.zh, .jp').forEach(el => el.classList.remove('visible'));
+            document.querySelectorAll('.' + lang).forEach(el => el.classList.add('visible'));
+            document.getElementById('btn-zh').classList.toggle('active', lang === 'zh');
+            document.getElementById('btn-jp').classList.toggle('active', lang === 'jp');
         }
-      }
-</script>
-
+    </script>
 </body>
 </html>
