@@ -6,75 +6,51 @@
     <title>远程协助指南 | 遠隔サポートガイド</title>
     <style>
         body { font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 20px; line-height: 1.6; }
-        .nav-header { max-width: 800px; margin: 20px auto 40px; display: flex; align-items: center; justify-content: space-between; }
+        .nav-header { max-width: 800px; margin: 20px auto 40px; }
         .back-btn { text-decoration: none; color: #007bff; font-weight: bold; border: 1.5px solid #007bff; padding: 8px 20px; border-radius: 25px; transition: 0.3s; background: white; }
         .back-btn:hover { background: #007bff; color: white; }
-        
         .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 20px; padding: 40px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         h2 { color: #007bff; border-left: 5px solid #007bff; padding-left: 15px; margin-bottom: 30px; }
         .step { margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid #eee; }
-        .step:last-child { border-bottom: none; }
-        .step-title { font-size: 1.25em; font-weight: bold; color: #333; margin-bottom: 15px; display: flex; align-items: center; }
-        .step-number { background: #007bff; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 12px; font-size: 0.8em; }
-        
+        .step-title { font-size: 1.25em; font-weight: bold; margin-bottom: 15px; }
+        .step-number { background: #007bff; color: white; width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; margin-right: 10px; }
         .download-box { background: #eef7ff; border-radius: 12px; padding: 20px; margin: 15px 0; text-align: center; }
         .dl-btn { display: inline-block; background: #007bff; color: white; text-decoration: none; padding: 12px 30px; border-radius: 10px; font-weight: bold; margin: 10px; transition: 0.3s; }
-        .dl-btn:hover { background: #0056b3; transform: translateY(-2px); }
-        .dl-btn.mac { background: #555; }
-        
+        .dl-btn:hover { background: #0056b3; }
         .id-example { background: #f8f9fa; border: 2px dashed #ccc; padding: 15px; border-radius: 10px; font-family: monospace; font-size: 1.1em; color: #e44d26; margin: 15px 0; display: inline-block; }
-        .jp-text { display: block; font-size: 0.85em; color: #666; font-weight: normal; margin-top: 4px; }
         .safe-tip { background: #fff4f2; border-left: 5px solid #ff4d4f; padding: 15px; border-radius: 8px; margin-top: 20px; font-size: 0.9em; }
     </style>
 </head>
 <body>
 
 <div class="nav-header">
-    <a href="pc_service.html" class="back-btn">⬅ 返回服务列表 / 戻る</a>
+    <a href="pc_service.html" class="back-btn">⬅ 返回 / 戻る</a>
 </div>
 
 <div class="container">
     <h2>远程协助指南 / 遠隔サポートガイド</h2>
 
     <div class="step">
-        <div class="step-title">
-            <span class="step-number">1</span>
-            <div>下载远程软件 / <span class="jp-text">ソフトのダウンロード</span></div>
-        </div>
-        <p>请下载官方 RustDesk 客户端。无需安装，下载后双击即可运行。</p>
+        <div class="step-title"><span class="step-number">1</span> 下载软件 / ダウンロード</div>
+        <p>请下载 RustDesk 客户端（绿色免安装）：</p>
         <div class="download-box">
             <a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.7/rustdesk-1.3.7-x86_64.exe" class="dl-btn">Windows版 下载</a>
-            <a href="https://github.com/rustdesk/rustdesk/releases/download/1.3.7/rustdesk-1.3.7-x86_64.dmg" class="dl-btn mac">Mac版 下载</a>
         </div>
     </div>
 
     <div class="step">
-        <div class="step-title">
-            <span class="step-number">2</span>
-            <div>告知您的 ID 与密码 / <span class="jp-text">IDとパスワードの連絡</span></div>
-        </div>
-        <p>运行软件后，请将界面左侧显示的 <b>ID</b> 和 <b>密码 (Password)</b> 告知我。</p>
+        <div class="step-title"><span class="step-number">2</span> 告知 ID / IDの連絡</div>
+        <p>请将软件显示的 <b>ID</b> 和 <b>密码</b> 告知我：</p>
         <div class="id-example">ID: 123 456 789 <br> PW: ******</div>
-        <p>您可以拨打电话：<strong style="color: #28a745;">090-9895-8631</strong></p>
+        <p>电话：<strong style="color: #28a745;">090-9895-8631</strong></p>
     </div>
 
     <div class="step">
-        <div class="step-title">
-            <span class="step-number">3</span>
-            <div>接受连接请求 / <span class="jp-text">接続の承認</span></div>
-        </div>
-        <p>当我尝试连接时，请点击屏幕弹窗上的 <b>“接受 (Accept)”</b> 或 <b>“允许 (Allow)”</b>。</p>
-        
+        <div class="step-title"><span class="step-number">3</span> 接受连接 / 接続承認</div>
         <div class="safe-tip">
-            <strong>🔒 安全提示 / セキュリティ：</strong><br>
-            您可以在屏幕上实时看到我的所有操作。远程过程中请勿离开。您可以随时通过关闭软件来终止连接。<br>
-            <small>(操作内容はリアルタイムでご確認いただけます。ソフトを閉じれば接続は即座に終了します。)</small>
+            <strong>🔒 安全提示：</strong> 您可以实时看到我的所有操作。远程过程中请勿离开，您可以随时关闭软件终止连接。
         </div>
     </div>
-</div>
-
-<div style="text-align: center; margin-top: 30px; color: #999; font-size: 0.8em;">
-    PCサポート Nakatsugawa | Powered by RustDesk
 </div>
 
 </body>
