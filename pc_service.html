@@ -10,7 +10,6 @@
         .back-btn { text-decoration: none; color: #007bff; font-weight: bold; border: 1.5px solid #007bff; padding: 8px 20px; border-radius: 25px; transition: 0.3s; background: white; }
         .back-btn:hover { background: #007bff; color: white; }
         
-        /* 网格布局调整为 3 列 */
         .container { max-width: 1000px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         
         .service-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #007bff; display: flex; flex-direction: column; }
@@ -18,18 +17,20 @@
         .jp-subtitle { display: block; font-size: 0.8em; color: #666; font-weight: normal; margin-top: 4px; }
         .price-tag { font-size: 24px; color: #e44d26; font-weight: bold; margin: 15px 0; }
         .price-tag span { font-size: 14px; color: #888; font-weight: normal; }
-        ul { padding-left: 20px; color: #555; font-size: 0.95em; flex-grow: 1; } /* 确保列表撑开空间 */
+        ul { padding-left: 20px; color: #555; font-size: 0.95em; margin-bottom: 20px; }
         
-        /* 按钮样式优化 */
-        .btn-group { margin-top: auto; padding-top: 20px; }
-        .btn-action { display: block; text-align: center; color: white; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: bold; transition: 0.3s; margin-bottom: 10px; }
-        .btn-email { background: #007bff; }
-        .btn-email:hover { background: #0056b3; }
+        /* 这里的按钮改为直接拨号或邮件，确保 100% 可用 */
+        .btn-action { display: block; text-align: center; color: white; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: bold; transition: 0.3s; margin-top: auto; }
         .btn-call { background: #28a745; }
         .btn-call:hover { background: #218838; }
-        
-        .contact-final { max-width: 1000px; margin: 50px auto; background: white; border-radius: 20px; padding: 30px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .email-display { background: #f8f9fa; padding: 10px 20px; border-radius: 8px; display: inline-block; font-family: monospace; color: #e44d26; font-weight: bold; margin: 10px 0; border: 1px dashed #ccc; }
+
+        .contact-final { max-width: 1000px; margin: 50px auto; background: white; border-radius: 20px; padding: 40px; text-align: center; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .contact-final h3 { color: #333; margin-bottom: 20px; border-bottom: 2px solid #007bff; display: inline-block; padding-bottom: 5px; }
+        .info-text { margin-bottom: 25px; color: #555; }
+        .contact-info-box { background: #f8f9fa; padding: 20px; border-radius: 15px; border: 1px solid #eee; }
+        .contact-item { font-size: 1.2em; font-weight: bold; margin: 10px 0; color: #333; }
+        .contact-item a { color: #007bff; text-decoration: none; }
+        .price-note { font-size: 0.85em; color: #999; margin-top: 10px; }
     </style>
 </head>
 <body>
@@ -45,53 +46,54 @@
 <div class="container">
     <div class="service-card">
         <h3>🧹 C盘深层瘦身 (远程)<br><span class="jp-subtitle">Cドライブ空き容量確保（遠隔）</span></h3>
-        <p>通过 Python 脚本精准清理系统残留、大文件识别。解决系统卡顿。</p>
+        <p>通过 Python 脚本精准清理系统残留。解决系统卡顿。</p>
         <div class="price-tag">¥2,000 <span>/ 次起 (税込)</span></div>
         <ul>
-            <li>系统缓存与冗余文件清理 <br><small>(システムキャッシュ・不要ファイル削除)</small></li>
-            <li>软件残留垃圾深度扫描 <br><small>(アプリ残骸のディープスキャン)</small></li>
+            <li>系统缓存与冗余清理 <br><small>(システムキャッシュ削除)</small></li>
+            <li>软件残留垃圾扫描 <br><small>(アプリ残骸のスキャン)</small></li>
         </ul>
-        <div class="btn-group">
-            <a href="mailto:sq25819487@gmail.com?subject=C盘瘦身预约" class="btn-action btn-email">邮件预约 / メール予約</a>
-        </div>
+        <a href="tel:09098958631" class="btn-action btn-call">电话咨询 / 電話で相談</a>
     </div>
 
     <div class="service-card">
         <h3>💿 纯净系统重装 (上门)<br><span class="jp-subtitle">OSクリーンインストール（訪問）</span></h3>
-        <p>中津川、惠那及周边。安装 Win10/Win11 纯净版，绝无捆绑软件。</p>
+        <p>安装 Win10/Win11 纯净版，绝无捆绑软件，流畅稳定。</p>
         <div class="price-tag">¥5,000 <span>/ 台起 (税込)</span></div>
         <ul>
-            <li>全套驱动程序优化安装 <br><small>(ドライバ最適化インストール)</small></li>
-            <li>重要数据备份指导 <br><small>(重要データのバックアップ相談)</small></li>
+            <li>全套驱动优化安装 <br><small>(ドライバ最適化導入)</small></li>
+            <li>重要数据备份指导 <br><small>(データのバックアップ相談)</small></li>
         </ul>
-        <div class="btn-group">
-            <a href="tel:09098958631" class="btn-action btn-call">拨打电话 / 電話する</a>
-            <a href="mailto:sq25819487@gmail.com?subject=系统重装咨询" class="btn-action btn-email">邮件咨询 / メール</a>
-        </div>
+        <a href="tel:09098958631" class="btn-action btn-call">拨打电话 / 電話をかける</a>
     </div>
 
     <div class="service-card" style="border-top-color: #28a745;">
-        <h3>🚀 硬件升级 (上门)<br><span class="jp-subtitle">HDD→SSD換装・メモリ増設</span></h3>
-        <p>台式机/笔记本通用。老机焕新，速度倍增。标配大厂正品零部件。</p>
-        <div class="price-tag">¥4,000 <span>/ 工时起 (税込/料件另计)</span></div>
+        <h3>🚀 硬件升级 (上门)<br><span class="jp-subtitle">SSD換装・メモリ増設（訪問）</span></h3>
+        <p>笔记本或台式机。机械硬盘升级SSD，老机瞬间焕发第二春。</p>
+        <div class="price-tag">¥4,000 <span>/ 工时起 (税込)</span></div>
         <ul>
-            <li>机械硬盘升级为高速 SSD <br><small>(HDDを高速SSDへ交換)</small></li>
-            <li>系统整体迁移 (免重装) <br><small>(OS丸ごとコピー、環境維持)</small></li>
-            <li>内存条容量翻倍 <br><small>(メモリー増設でサクサク)</small></li>
+            <li>SSD高速硬盘更换 <br><small>(HDDを高速SSDへ交換)</small></li>
+            <li>内存条扩容升级 <br><small>(メモリー容量の増設)</small></li>
         </ul>
-        <div class="btn-group">
-            <a href="mailto:sq25819487@gmail.com?subject=硬件升级询价&body=请注明机型(台式/笔记本)及当前配置" class="btn-action btn-email">邮件询价 / 見積り</a>
-        </div>
+        <a href="tel:09098958631" class="btn-action btn-call">咨询报价 / お見積り</a>
     </div>
 </div>
 
 <div class="contact-final">
     <h3>咨询与服务区域 / お問い合わせ</h3>
-    <p>如果您不确定电脑出了什么问题，欢迎随时联系我。</p>
-    <p><strong>服务区域：</strong>中津川市、惠那市及周边地区 (上门)。其他地区支持远程。</p>
     
-    <div class="email-display">sq25819487@gmail.com</div>
-    <div style="font-size: 1.2em; font-weight: bold; color: #28a745; margin-top: 10px;">TEL: 090-9895-8631</div>
+    <div class="info-text">
+        <p>如果您不确定电脑出了什么问题，欢迎随时联系我。<br>
+        <small>(パソコンの不具合でお困りの際は、お気軽にご連絡ください。)</small></p>
+        
+        <p><strong>服务区域 (上门)：</strong>中津川市、惠那市及周边地区。其他地区支持远程操作。<br>
+        <small>(<strong>対応エリア：</strong>中津川市、恵那市及び周辺地区。その他地域は遠隔対応となります。)</small></p>
+    </div>
+    
+    <div class="contact-info-box">
+        <div class="contact-item">📧 <a href="mailto:sq25819487@gmail.com">sq25819487@gmail.com</a></div>
+        <div class="contact-item" style="color: #28a745;">📞 <a href="tel:09098958631" style="color: #28a745;">090-9895-8631</a></div>
+        <p class="price-note">* 硬件升级零件费用另计 / パーツ代金は別途頂戴いたします。</p>
+    </div>
 </div>
 
 </body>
