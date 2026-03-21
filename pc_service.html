@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>电脑咨询与维修 | PCサポート</title>
+    <style>
+        body { font-family: 'Segoe UI', "Microsoft YaHei", sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 20px; line-height: 1.6; }
+        .nav-header { max-width: 900px; margin: 20px auto 40px; display: flex; align-items: center; justify-content: space-between; }
+        .back-btn { text-decoration: none; color: #007bff; font-weight: bold; border: 1.5px solid #007bff; padding: 8px 20px; border-radius: 25px; transition: 0.3s; background: white; }
+        .back-btn:hover { background: #007bff; color: white; }
+        .container { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 25px; }
+        .service-card { background: white; border-radius: 20px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 5px solid #007bff; }
+        .service-card h3 { margin-top: 0; color: #007bff; display: flex; align-items: center; }
+        .price-tag { font-size: 24px; color: #e44d26; font-weight: bold; margin: 15px 0; }
+        .price-tag span { font-size: 14px; color: #888; font-weight: normal; }
+        ul { padding-left: 20px; color: #666; }
+        .btn-contact { display: block; text-align: center; background: #007bff; color: white; text-decoration: none; padding: 12px; border-radius: 10px; font-weight: bold; margin-top: 20px; transition: 0.3s; }
+        .btn-contact:hover { background: #0056b3; }
+        .consult-box { grid-column: 1 / -1; background: #eef2f7; border-radius: 20px; padding: 30px; text-align: center; }
+        textarea { width: 100%; height: 100px; margin-top: 15px; border-radius: 10px; border: 1px solid #ccc; padding: 10px; box-sizing: border-box; }
+    </style>
+</head>
+<body>
+
+    <div class="nav-header">
+        <a href="index.html" class="back-btn">⬅ 返回首页 / 戻る</a>
+        <div style="text-align: right;">
+            <div style="font-weight: bold; color: #555;">专业电脑故障排查服务</div>
+            <div style="font-size: 12px; color: #999;">PCトラブル解決・最適化</div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="service-card">
+            <h3>🧹 C盘深层瘦身 (远程)</h3>
+            <p>通过 Python 脚本精准清理系统残留、大文件识别。解决系统卡顿、存储不足问题。</p>
+            <div class="price-tag">¥2,000 <span>/ 次起</span></div>
+            <ul>
+                <li>系统缓存与冗余文件清理</li>
+                <li>软件残留垃圾深度扫描</li>
+                <li>无需出门，远程快速搞定</li>
+            </ul>
+            <a href="https://line.me/your_id" class="btn-contact">立即预约远程 / 予約</a>
+        </div>
+
+        <div class="service-card">
+            <h3>💿 纯净系统重装 (上门)</h3>
+            <p>中津川、惠那及周边上门服务。安装 Win10/Win11 纯净版，绝无捆绑软件。</p>
+            <div class="price-tag">¥5,000 <span>/ 台起</span></div>
+            <ul>
+                <li>全套驱动程序优化安装</li>
+                <li>常用装机工具包配置</li>
+                <li>重要数据备份指导</li>
+            </ul>
+            <a href="tel:080xxxxxxxx" class="btn-contact">拨打电话咨询 / 電話</a>
+        </div>
+
+        <div class="consult-box">
+            <h3>❓ 故障咨询 / お問い合わせ</h3>
+            <p>电脑开不了机？蓝屏？欢迎免费留言简述问题，我会尽快回复您。</p>
+            <textarea placeholder="请简述您的电脑问题... (例：开机显示蓝屏代码)"></textarea>
+            <button class="btn-contact" style="width: 200px; margin: 20px auto; border: none; cursor: pointer;">提交留言 / 送信</button>
+        </div>
+    </div>
+
+</body>
+</html>
